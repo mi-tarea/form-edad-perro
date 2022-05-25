@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilop.css">
+    <title>calcula edad de tu perro</title>
+</head>
+<body>
+    <header><h1>Calcula la edad de tu perro</h1></header>
+    <br><br><br>
+    <section class="calculo">
+        <img src="perro.jpg" alt="perro" width="400" height="200">
+        <br><br>
+        <input class="cja1" type="text" id="nombre" placeholder="nombre">
+        <input class="cja1" type="number" id="edad" placeholder="edad">
+
+        <button class="boton" id="btn1">metodo log</button>
+        <button class="boton" id="btn2">metodo 7</button>
+        <div id="resultado"></div>
+        
+        <script>
+            //metodo log
+            var a=document.getElementById('btn1');
+            //al hacer click se ejecutara la funcion logaritmo//
+            a.addEventListener("click",logaritmo);
+            //metodo +7
+            var b=document.getElementById('btn2');
+            //al hacer click se ejecutara la funcion metodo7//
+            b.addEventListener("click",metodo7);
+
+            //nombramos a nuestra funcion logaritmo//
+            function logaritmo() 
+            {
+            var n2=parseInt(document.getElementById("edad").value);
+            var s=Math.log(n2)*16+31;
+            document.getElementById("resultado").innerHTML = "Tiene "+s.toFixed(0)+" Años de edad humana"
+            }
+            //nombramos a nuestra funcion metodo7//
+            function metodo7() 
+            {
+            var n2=parseInt(document.getElementById("edad").value);
+            var s=n2+7;
+            document.getElementById("resultado").innerHTML = "Tiene "+s.toFixed(0)+" Años de edad humana"
+            }
+        </script>
+    </section>
+</body>
+</html>
